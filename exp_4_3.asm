@@ -1,17 +1,19 @@
 assume cs:code
 code segment
 
-    mov ax,0ffffh
+    mov ax,cs
     mov ds,ax
+    mov ax,0020h
+    mov es,ax
     mov bx,0
-    mov dx,0
-    mov cx,12
+    mov cx,15
 
 s:  mov al,[bx]
-    mov ah,0
-    add dx,ax
+    mov es:[bx],al
     inc bx
     loop s
+    mov ax,4c00h
+    int 21h
 
 code ends
 end
