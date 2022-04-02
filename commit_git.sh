@@ -1,6 +1,6 @@
 #!/bin/sh
-SRC_DIR=/Users/zhaobo/zhbom2/masm/my-code
-DEST_DIR=/Users/zhaobo/zhbom2/assembly-test
+SRC_DIR=~/zhbom2/masm/my-code
+DEST_DIR=~/zhbom2/assembly-test
 cp -r $SRC_DIR/* $DEST_DIR
 
 cd $DEST_DIR
