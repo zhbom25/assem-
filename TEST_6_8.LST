@@ -1,0 +1,66 @@
+Microsoft (R) Macro Assembler Version 5.00                  4/5/22 18:26:47
+                                                             Page     1-1
+
+
+				assume cs:code 
+				 
+ 0000				a segment 
+ 0000  01 02 03 04 05 06 07	    db 1,2,3,4,5,6,7,8 
+       08			
+ 0008				a ends 
+				 
+ 0000				b segment 
+ 0000  01 02 03 04 05 06 07	    db 1,2,3,4,5,6,7,8 
+       08			
+ 0008				b ends 
+				 
+ 0000				c segment 
+ 0000  00 00 00 00 00 00 00	    db 0,0,0,0,0,0,0,0 
+       00			
+ 0008				c ends 
+				 
+ 0000				code segment 
+ 0000  B8 ---- R		start:  mov ax,a 
+ 0003  8E D8			        mov ds,ax 
+ 0005  B9 0008			        mov cx,8 
+ 0008  BB 0000			        mov bx,0 
+ 000B  8B 07			    s:  mov ax,ds:[bx] 
+ 000D  03 07			        add ax,ds:[bx] 
+ 000F  83 C3 10			        add bx,10h 
+ 0012  89 07			        mov ds:[bx],ax 
+ 0014  83 EB 20			        sub bx,20h 
+ 0017  83 C3 01			        add bx,1 
+ 001A  E2 EF			        loop s 
+ 001C				code ends 
+				end start 
+Microsoft (R) Macro Assembler Version 5.00                  4/5/22 18:26:47
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+A  . . . . . . . . . . . . . . .  	0008	PARA	NONE	
+B  . . . . . . . . . . . . . . .  	0008	PARA	NONE	
+C  . . . . . . . . . . . . . . .  	0008	PARA	NONE	
+CODE . . . . . . . . . . . . . .  	001C	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+S  . . . . . . . . . . . . . . .  	L NEAR	000B	CODE
+START  . . . . . . . . . . . . .  	L NEAR	0000	CODE
+
+@FILENAME  . . . . . . . . . . .  	TEXT  test_6_8		
+
+
+     28 Source  Lines
+     28 Total   Lines
+      8 Symbols
+
+  50990 + 465554 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

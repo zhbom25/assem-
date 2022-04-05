@@ -8,3 +8,5 @@ git add *
 git commit -m "update"
 git push
 
+## 重要点：DOSBox里，汇编文件名最多支持两个_
+
