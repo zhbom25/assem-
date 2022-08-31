@@ -10,4 +10,4 @@ code segment
     sub al,al
 code ends
 
-end start
+end
