@@ -5,7 +5,7 @@ code segment
     mov ax,0
     mov ds,ax
     mov bx,200
-    mov cx,64
+    mov cx,4
 
 s:  mov ds:[bx],ax
     inc ax

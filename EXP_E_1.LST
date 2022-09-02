@@ -1,0 +1,39 @@
+Microsoft (R) Macro Assembler Version 5.00                  8/31/22 24:28:16
+                                                             Page     1-1
+
+
+				assume cs:code 
+ 0000				code segment 
+ 0000  CD 00			    int al,20h 
+c:\my-code\exp_e_1.ASM(3): error A2042: Constant expected
+ 0002  E6 20			    out 20h,al 
+ 0004  BA 03F8			    mov dx,3f8h 
+ 0007  EC			    in al,dx 
+ 0008  EE			    out dx,al 
+ 0009				code ends 
+				end 
+Microsoft (R) Macro Assembler Version 5.00                  8/31/22 24:28:16
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	0009	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+@FILENAME  . . . . . . . . . . .  	TEXT  exp_e_1		
+
+
+      9 Source  Lines
+      9 Total   Lines
+      3 Symbols
+
+  51168 + 465376 Bytes symbol space free
+
+      0 Warning Errors
+      1 Severe  Errors
